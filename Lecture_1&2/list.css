@@ -1,0 +1,32 @@
+li li {
+    /* descendant selector*/
+    display: none;
+}
+
+li:hover > ul > li{
+    /* child selector */
+    display: block;
+}
+
+li:hover > ol > li {
+    display: block ;
+}
+
+form {
+    width: 80%;
+    font-size: 20px;
+}
+
+input { 
+    border: 2px solid black;
+    font-size: 17px;
+}
+input:focus {
+    background-color: lightgoldenrodyellow;
+}
+textarea {
+    font-size: 20px;
+}
+button {
+    font-size: 17px;
+}
