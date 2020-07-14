@@ -1,0 +1,2 @@
+Concepts learned in class 1 and 2 :
+  HTML + basic CSS
