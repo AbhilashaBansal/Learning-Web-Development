@@ -1,0 +1,13 @@
+body {
+    background-image: linear-gradient(skyblue, powderblue, white);
+    position: relative;
+}
+
+#carous {
+    margin-top: 7%;
+    padding: 2%;
+}
+
+.carousel-item {
+    max-height: 550px;
+}
