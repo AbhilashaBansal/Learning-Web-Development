@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body data-spy="scroll" data-target="#navbarexample">
+
     <!-- Navbar with scroll spy -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container" id="navbarexample">
@@ -28,11 +29,46 @@
                     <a class="nav-link" href="#tour-dates">Tour dates</a>
                     </li>
                 </ul>
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign Up</button>
+                <button type="button" class="btn btn-outline-success my-2 my-sm-0" data-toggle="modal" data-target="#staticBackdrop" type="submit">
+                Sign up
+                </button>
             </div>
         </div>
     </nav>
     <!-- !Navbar with scroll spy -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Sign up to our receive all information about our latest album release & upcoming shows!</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="" method="GET">
+            <fieldset>
+              <label for="name">Name: </label>
+              <input type="text" name="name" id="name"><br>
+              <label for="email">Email: </label>
+              <input type="text" name="email" id="email"><br>
+              <label for="city">City: </label>
+              <input type="text" name="city" id="city"><br>
+              <label for="country">Country: </label>
+              <input type="text" name="country" id="country">
+            </fieldset>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- !Modal -->
 
     <!-- Carousel -->
     <div class="container" id="carous">
@@ -76,23 +112,119 @@
 
     <!-- Main Content -->
     <div class="container">
+        <!-- About us -->
         <div class="" id="about-us">
-            <h4>About us -> add cards from bootstrap</h4>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem IpsumLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-            <br><br>
+            <h2 class="text-center">About us</h2>
+            <!-- About us Cards -->
+            <!-- <div class="row "> -->
+            <div class="row card-deck" align="center">
+              <div class="col-md-6 col-lg-4">
+              <div class="card artist-card">
+                <img src="./member1.jpeg" class="card-img-top" alt="Person 1">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Band Member 1</h5>
+                  <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                </div>
+              </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+              <div class="card artist-card">
+                <img src="./member2.jpeg" class="card-img-top" alt="Person 2">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Band Member 2</h5>
+                  <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                </div>
+              </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+              <div class="card artist-card">
+                <img src="./member3.jpg" class="card-img-top" alt="Person 3">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Band Member 3</h5>
+                  <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                </div>
+              </div>
+              </div>
+            </div>
+            <!-- </div> -->
+            <!-- !About us Cards -->
         </div>
-        <div class="" id="albums">
-            <h4>Albums -> add rotating 3d cards</h4>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem IpsumLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem IpsumLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem IpsumLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p><br><br>
+        <!-- !About us -->
+
+        <!-- Albums -->
+        <div class="albums" id="albums">
+            <h2 class="text-center">Albums</h2>
+            <!-- Album cards -->
+            <div class="row" align="center">
+            <div class="col-md-4 col-sm-6">
+            <div class="card album-card">
+              <img src="album1.jpg" class="card-img-top" alt="Album 1">
+              <div class="card-body">
+                <h5 class="card-title">Album 1</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Buy it</a>
+              </div>
+            </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+            <div class="card album-card">
+              <img src="album2.png" class="card-img-top" alt="Album 2">
+              <div class="card-body">
+                <h5 class="card-title">Album 2</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Buy it</a>
+              </div>
+            </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+            <div class="card album-card">
+              <img src="album3.png" class="card-img-top" alt="Album 3">
+              <div class="card-body">
+                <h5 class="card-title">Album 3</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Buy it</a>
+              </div>
+            </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+            <div class="card album-card">
+              <img src="album4.png" class="card-img-top" alt="Album 4">
+              <div class="card-body">
+                <h5 class="card-title">Album 4</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Buy it</a>
+              </div>
+            </div>
+            </div>
+            </div>
+            <!-- !Album cards -->
         </div>
+        <!-- !Albums -->
+
+        <!-- Tour Dates -->
         <div class="" id="tour-dates">
-            <h4>Tour dates -> add list from bootstrap</h4>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem IpsumLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-            <br><br>
+            <h2 class="text-center">Tour Dates</h2>
+            <ul class="list-group offset-md-1 col-md-10">
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Japan 
+                <span class="badge badge-primary badge-pill">September 08</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Ziggo Dome, Netherlands
+                <span class="badge badge-primary badge-pill">September 16</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Brazil 
+                <span class="badge badge-primary badge-pill">September 20</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Manchester 
+                <span class="badge badge-primary badge-pill">September 28</span>
+              </li>
+            </ul>
         </div>
+        <!-- Tour Dates -->
         <br>
-        <hr>
         <br>
     </div>
     <!-- !Main Content -->
@@ -100,7 +232,6 @@
     <!-- Footer -->
     <footer class="bg-dark p-3 text-white-50">
     <div class="container">
-        
         <ul class="nav" style="float: left;">
             <li class="nav-item">Reach us at: &nbsp;</li>
             <li class="nav-item pl-1 pr-1 border-right border-white">
@@ -113,7 +244,7 @@
               <a class="text-white" href="#">&nbsp;Facebook </a>
             </li>
         </ul>
-        <div class="text-right">&copy; ABC Music</div>
+        <div id="copyright" class="text-right">&copy; ABC Music</div>
     </div>
     </footer>
     <!-- !Footer -->
