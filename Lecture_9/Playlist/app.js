@@ -90,6 +90,7 @@ function playAudio(x){
     setTimeout(() => {
         console.log(x.ended);
         if(x.ended){
+            x.parentNode.parentNode.style.backgroundColor = "rgb(215, 247, 237)";
             playNext();
         }
     }, x.duration*1000 + 5000);
