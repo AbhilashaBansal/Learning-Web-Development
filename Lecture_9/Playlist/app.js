@@ -8,6 +8,7 @@ const available = document.getElementById("available");
 const play_body = document.getElementById("play-body");
 let songs_in_playlist = [];
 let current_song_id = "";
+let playing = false;
 
 let song_urls = ["http://mysound.ge/track/2584/taylor-swift-style"];
 
@@ -68,6 +69,7 @@ let prev = document.getElementById("prev");
 //plays next song in queue
 function playNext(){
     let index = songs_in_playlist.indexOf(current_song_id);
+    let elt1 = document.getElementsByClassName(current_song_id)[0].backgroundColor = "rgb(215, 247, 237)";
     if(index == (songs_in_playlist.length-1)){
 
         index = 0;
@@ -83,14 +85,18 @@ function playNext(){
 //start playing
 function playAudio(x){
     x.play();
+    x.parentNode.parentNode.style.backgroundColor = "deepskyblue";
+    // playing = true;
     setTimeout(() => {
+        console.log(x.ended);
         if(x.ended){
             playNext();
         }
-    }, x.duration);
+    }, x.duration*1000 + 5000);
 }
 function pauseAudio(x){
     x.pause();
+    // playing = false;
 }
 
 play.addEventListener("click", play_fn);
@@ -100,6 +106,7 @@ function play_fn(){
     if(songs_in_playlist.length==0){
         alert("There are no songs in the playlist!");
     }
+
     else if(current_song_id==""){
         current_song_id = songs_in_playlist[0];
         console.log(current_song_id);
@@ -136,6 +143,7 @@ next.addEventListener("click", function(e){
         let elt = document.getElementsByClassName(current_song_id)[0].children[0].children[0];
         elt.pause();
         elt.load();
+        elt.parentNode.parentNode.style.backgroundColor = "rgb(215, 247, 237)";
         elt.ended = true;
         playNext();
     }
@@ -158,6 +166,7 @@ prev.addEventListener("click", function(e){
             let elt1 = document.getElementsByClassName(current_song_id)[0].children[0].children[0];
             pauseAudio(elt1);
             elt1.load();
+            elt1.parentNode.parentNode.style.backgroundColor = "rgb(215, 247, 237)";
             current_song_id = songs_in_playlist[songs_in_playlist.length-1];
             let elt = document.getElementsByClassName(current_song_id)[0].children[0].children[0];
             playAudio(elt);
@@ -165,12 +174,12 @@ prev.addEventListener("click", function(e){
         else{
             let elt = document.getElementsByClassName(current_song_id)[0].children[0].children[0];
             elt.load();
+            elt.parentNode.parentNode.style.backgroundColor = "rgb(215, 247, 237)";
             current_song_id = songs_in_playlist[index-1];
             play_fn();
         }
     }
 });
-
 
 
 
